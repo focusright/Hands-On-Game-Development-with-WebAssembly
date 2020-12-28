@@ -1,3 +1,5 @@
+//emcc keyboard_move.c -o keyboard_move.html --preload-file sprites -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS=['png']
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <emscripten.h>

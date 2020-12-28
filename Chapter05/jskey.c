@@ -1,3 +1,5 @@
+//emcc jskey.c -o jskey.html -s NO_EXIT_RUNTIME=1 --shell-file jskey_shell.html -s EXPORTED_FUNCTIONS="['_main', '_press_up', '_press_down', '_press_left', '_press_right', '_release_up', '_release_down', '_release_left', '_release_right']" -s EXTRA_EXPORTED_RUNTIME_METHODS="['cwrap', 'ccall']"
+
 #include <emscripten.h>
 #include <stdlib.h>
 #include <stdio.h>

@@ -1,3 +1,5 @@
+//emcc keyboard.c -o keyboard.html -s USE_SDL=2
+
 #include <SDL2/SDL.h>
 #include <emscripten.h>
 #include <stdio.h>
