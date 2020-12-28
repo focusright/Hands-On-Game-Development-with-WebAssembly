@@ -1,3 +1,5 @@
+//emcc sprite_animation.c --preload-file sprites -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS=["png"] -o sprite_animation.html
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <emscripten.h>

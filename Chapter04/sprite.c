@@ -1,3 +1,5 @@
+//emcc sprite.c --preload-file sprites -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS=["png"] -o sprite.html
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <emscripten.h>
@@ -42,10 +44,10 @@ int main() {
 
     SDL_RenderPresent( renderer );
     
-    SDL_Delay(5000);
+    // SDL_Delay(5000);
 
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+    // SDL_DestroyWindow(window);
+    // SDL_Quit();
 
     return 1;
 }

@@ -1,3 +1,6 @@
+//emcc --show-ports
+//emcc hello_sdl.c --emrun --preload-file font -s USE_SDL=2 -s USE_SDL_TTF=2 -o hello_sdl.html
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <emscripten.h>

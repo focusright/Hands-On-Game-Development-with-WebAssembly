@@ -1,3 +1,5 @@
+//emcc webgl.c -o webgl.html --shell-file webgl_shell.html
+
 #include <emscripten.h>
 #include <stdlib.h>
 #include <stdio.h>
