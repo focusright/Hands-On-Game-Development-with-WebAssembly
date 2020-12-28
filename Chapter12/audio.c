@@ -1,3 +1,5 @@
+//emcc audio.c -o audio.html --preload-file audio -s USE_SDL=2
+
 #include <SDL2/SDL.h>
 #include <emscripten.h>
 #include <stdio.h>
