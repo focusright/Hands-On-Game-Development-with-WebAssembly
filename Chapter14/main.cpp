@@ -1,4 +1,4 @@
-//em++ asteroid.cpp audio.cpp camera.cpp collider.cpp emitter.cpp enemy_ship.cpp finite_state_machine.cpp locator.cpp main.cpp particle.cpp player_ship.cpp projectile_pool.cpp projectile.cpp range.cpp render_manager.cpp shield.cpp ship.cpp star.cpp ui_button.cpp ui_sprite.cpp vector.cpp -o ui.html --preload-file audio --preload-file sprites -std=c++17 -s USE_WEBGL2=1 -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS=['png'] -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS=['png'] 
+//em++ asteroid.cpp audio.cpp camera.cpp collider.cpp emitter.cpp enemy_ship.cpp finite_state_machine.cpp locator.cpp main.cpp particle.cpp player_ship.cpp projectile_pool.cpp projectile.cpp range.cpp render_manager.cpp shield.cpp ship.cpp star.cpp ui_button.cpp ui_sprite.cpp vector.cpp -o ui.html --preload-file audio --preload-file sprites -std=c++17 -s USE_WEBGL2=1 -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS=['png']
 
 #include "game.hpp"
 
@@ -275,6 +275,7 @@ void move() {
 void start_render() {
     render_manager->RenderStartBackground();
     play_btn->RenderUI();
+    SDL_RenderPresent( renderer );
 }
 
 void play_render() {
@@ -295,8 +296,6 @@ void play_render() {
 
     star->Render();
     locator->Render();
-    
-    SDL_RenderPresent( renderer );
 }
 
 void collisions() {
@@ -513,6 +512,7 @@ void game_loop() {
         you_win_sprite->RenderUI();
         play_again_btn->RenderUI();
     }
+    SDL_RenderPresent( renderer );
 }
 
 void play_click() {
